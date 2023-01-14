@@ -1,3 +1,4 @@
+import { AnalyticsService } from 'src/app/shared/analytics.service';
 import { AppComponent } from './app/app.component';
 import { enableProdMode } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
@@ -8,4 +9,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-bootstrapApplication(AppComponent);
+bootstrapApplication(AppComponent, { providers: [AnalyticsService] });
